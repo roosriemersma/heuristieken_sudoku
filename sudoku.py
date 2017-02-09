@@ -1,4 +1,3 @@
-rows = []
 row = []
 sudoku = open("puzzle1.sudoku", "r")
 for line in sudoku:
@@ -7,5 +6,4 @@ for line in sudoku:
     line = list(line)
     line = list(map(int, line))
     row.append(line)
-#row = list(map(int, row))
 print (row)
