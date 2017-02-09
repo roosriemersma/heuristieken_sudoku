@@ -12,3 +12,4 @@ print ("Let's get started guys")
 0,0,2,3,0,0,0,0,0
 0,0,9,0,0,0,0,5,4
 print ("Wow Rose, you're the best!")
+print ("Hello")
