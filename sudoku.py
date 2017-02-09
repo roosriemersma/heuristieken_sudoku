@@ -1,13 +1,10 @@
-w, h, i = 8, 8, 0;
-matrix = [[i for x in range(w)] for y in range(h)]
-matrix = []
-matrix.append([i])
+print(" hi")
 
-    # matrix[h][w]
-    # for i in range(i)
-
-
-
+list = []
+sudoku = open("puzzle1.sudoku", "r")
+line = sudoku.readline()
+for line in sudoku:
+    list.append(line)
 
 
 def checkrow
