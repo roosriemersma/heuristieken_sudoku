@@ -1,6 +1,7 @@
-list = []
+rows = []
 sudoku = open("puzzle1.sudoku", "r")
-line = sudoku.readline()
 for line in sudoku:
-    list.append(line)
-
+    line = line.replace(",", "")
+    #list(line)
+    rows.append(line.rstrip())
+print (rows)
