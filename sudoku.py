@@ -1,7 +1,11 @@
 rows = []
+row = []
 sudoku = open("puzzle1.sudoku", "r")
 for line in sudoku:
     line = line.replace(",", "")
-    #list(line)
-    rows.append(line.rstrip())
-print (rows)
+    line = line.rstrip()
+    line = list(line)
+    line = list(map(int, line))
+    row.append(line)
+#row = list(map(int, row))
+print (row)
