@@ -1,2 +1,1 @@
-filename = 'puzzle1.sudoku'
-sudokuEmpty = open(filename, mode='r')
+puzzle1 = open("puzzle1.sudoku", "r")
