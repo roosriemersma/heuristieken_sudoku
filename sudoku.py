@@ -14,3 +14,6 @@ print (sudoku)
 for row in sudoku:
     print (row)
 
+#kolom geprint, waat ook niet of we hier iets mee kunnen, loop maken lukt me niet
+for firstNumb in sudoku:
+    print (firstNumb[0:1])
