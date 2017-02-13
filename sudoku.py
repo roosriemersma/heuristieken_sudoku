@@ -9,15 +9,6 @@ for line in puzzle:
     sudoku.append(line)
 print (sudoku)
 
-#geprint als matrix, weet niet of je hier iets mee kan :)
-
-for row in sudoku:
-   print (row)
-
-#kolom geprint, waat ook niet of we hier iets mee kunnen, loop maken lukt me niet
-#for firstNumb in sudoku:
-#    print (firstNumb[0:1])
-
 #printen van de sudoku
 def print_sudoku(input):
     for i in range(9):
@@ -52,3 +43,10 @@ def zit_in_kolom(input, kolom, nummer):
     return False
 
 #zoeken of nummer wordt gebruikt in box, als nummer in box zit dan return True
+def zit_in_box(input, rij, kolom, nummer):
+    for i in range (3)
+        for j in range(3)
+            if (input[i + rij][j + kolom] == nummer):
+                return True
+    return False
+
