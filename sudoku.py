@@ -37,12 +37,18 @@ def zoek_lege_plek(input, plek):
 #nu hebben we de "coordinaten" van een lege plek in de list plek, waarmee we nu verder gaan werken
 
 
-#zoeken of nummer gebruikt wordt in de rij
+#zoeken of nummer gebruikt wordt in de rij, als nummer in rij zit dan return True
 def zit_in_rij(intput, rij, nummer):
     for i in range(9):
         if (input[rij][i] == nummer):
             return True
     return False
 
-#zoeken of nummer wordt gebruikt in kolom
-def 
+#zoeken of nummer wordt gebruikt in kolom, als nummer in kolom zit dan return True
+def zit_in_kolom(input, kolom, nummer):
+    for i in range (9):
+        if (input[i][kolom] == nummer):
+            return True
+    return False
+
+#zoeken of nummer wordt gebruikt in box, als nummer in box zit dan return True
