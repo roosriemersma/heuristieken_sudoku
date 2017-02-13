@@ -11,8 +11,8 @@ print (sudoku)
 
 #geprint als matrix, weet niet of je hier iets mee kan :)
 
-#for row in sudoku:
-#    print (row)
+for row in sudoku:
+   print (row)
 
 #kolom geprint, waat ook niet of we hier iets mee kunnen, loop maken lukt me niet
 #for firstNumb in sudoku:
@@ -26,12 +26,12 @@ def print_sudoku(input):
         print ('\n')
 
 #zoeken naar lege plek in sudoku
-def zoek_lege_plek(input, plek)
+def zoek_lege_plek(input, plek):
     for rij in range(9):
         for kolom in range(9):
             if(input[rij][kolom] == 0):
-                plek[0] = rij  #WAAROM 0???
-                plek[1] = kolom   #WAAROM 1???
+                plek[0] = rij
+                plek[1] = kolom
                 return True
     return False
 
