@@ -10,10 +10,10 @@ for line in puzzle:
 print (sudoku)
 
 #printen van de sudoku
-def print_sudoku(input):
+def sudoku_printen(input):
     for i in range(9):
         for j in range(9):
-            print (x[i][j]),
+            print (input[i][j]),
         print ('\n')
 
 #zoeken naar lege plek in sudoku
@@ -77,8 +77,13 @@ def sudoku_oplossen(input):
     for nummer in range(1, 10):
         if(kan_nummer_hier(input, rij, kolom, nummer)):
             input[rij][kolom] = nummer
-            if (sudoku_oplossen(inut)):
+            if (sudoku_oplossen(input)):
                 return True
             input[rij][kolom] = 0
     return False
 
+
+if (sudoku_oplossen(sudoku)):
+    sudoku_printen(sudoku)
+else:
+    print ("Geen oplossing mogelijk")
