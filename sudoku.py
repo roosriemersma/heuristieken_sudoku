@@ -19,9 +19,20 @@ print (sudoku)
 #    print (firstNumb[0:1])
 
 #printen van de sudoku
-def print_sudoku(x):
+def print_sudoku(input):
     for i in range(9):
         for j in range(9):
             print (x[i][j]),
         print ('\n')
+
+#zoeken naar lege plek in sudoku
+def zoek_lege_plek(input, plek)
+    for rij in range(9):
+        for kolom in range(9):
+            if(input[rij][kolom] == 0):
+                plek[0] = rij  #WAAROM 0???
+                plek[1] = kolom   #WAAROM 1???
+                return True
+    return False
+
 
