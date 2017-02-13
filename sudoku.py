@@ -25,7 +25,7 @@ def zoek_lege_plek(input, plek):
                 plek[1] = kolom
                 return True
     return False
-#nu hebben we de "coordinaten" van een lege plek in de list plek, waarmee we nu verder gaan werken
+#nu hebben we de "coordinaten" van een lege plek in de list plek, die we later weer gaan gebruiken
 
 
 #zoeken of nummer gebruikt wordt in de rij, als nummer in rij zit dan return True
