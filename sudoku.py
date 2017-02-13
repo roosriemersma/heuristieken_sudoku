@@ -29,7 +29,7 @@ def zoek_lege_plek(input, plek):
 
 
 #zoeken of nummer gebruikt wordt in de rij, als nummer in rij zit dan return True
-def zit_in_rij(intput, rij, nummer):
+def zit_in_rij(input, rij, nummer):
     for i in range(9):
         if (input[rij][i] == nummer):
             return True
@@ -44,9 +44,41 @@ def zit_in_kolom(input, kolom, nummer):
 
 #zoeken of nummer wordt gebruikt in box, als nummer in box zit dan return True
 def zit_in_box(input, rij, kolom, nummer):
-    for i in range (3)
-        for j in range(3)
+    for i in range (3):
+        for j in range(3):
             if (input[i + rij][j + kolom] == nummer):
                 return True
+    return False
+
+#kijken of nummer op de locatie kan, return een boolean om te kijken of nummer op locatie past
+def kan_nummer_hier(input, rij, kolom, nummer):
+    if (zit_in_rij(input, rij, nummer) == True):
+        return False
+    elif (zit_in_rij(input, rij, nummer) == False):
+        return True
+    if (zit_in_kolom(input, kolom, nummer) == True):
+        return (zit_in_kolom(input, kolom, nummer) == False)
+    elif (zit_in_kolom(input, kolom, nummer) == False):
+        return True
+    if (zit_in_box(input, rij, kolom, nummer) == True):
+        return False
+    elif (zit_in_box(input, rij, kolom, nummer) == False):
+        return True
+
+#sudoku oplossen
+def sudoku_oplossen(input):
+    plek = [0, 0]
+    if (not zoek_lege_plek(input, plek)):
+        return True
+
+    rij = plek[0]
+    kolom = plek[1]
+
+    for nummer in range(1, 10):
+        if(kan_nummer_hier(input, rij, kolom, nummer)):
+            input[rij][kolom] = nummer
+            if (sudoku_oplossen(inut)):
+                return True
+            input[rij][kolom] = 0
     return False
 
