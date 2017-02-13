@@ -45,4 +45,4 @@ def zit_in_rij(intput, rij, nummer):
     return False
 
 #zoeken of nummer wordt gebruikt in kolom
-
+def 
