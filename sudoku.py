@@ -76,4 +76,4 @@ def sudoku_oplossen(input):
 if (sudoku_oplossen(sudoku)):
     sudoku_printen(sudoku)
 else:
-    print ("Geen oploossing mogelijk")
+    print ("Geen oplossing mogelijk")
