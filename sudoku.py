@@ -11,11 +11,10 @@ print (sudoku)
 
 #printen van de sudoku
 def sudoku_printen(input):
-    print("hello")
     for i in range(9):
         for j in range(9):
             print (input[i][j], end=" ")
-        print ('\n', end=" ")
+        print ('\n', end="")
 
 #zoeken naar lege plek in sudoku
 def zoek_lege_plek(input, plek):
