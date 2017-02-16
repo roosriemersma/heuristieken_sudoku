@@ -52,17 +52,17 @@ def zit_in_box(input, rij, kolom, nummer):
 
 #kijken of nummer op de locatie kan, return een boolean om te kijken of nummer op locatie past
 def kan_nummer_hier(input, rij, kolom, nummer):
-    if (zit_in_rij(input, rij, nummer) == True):
+    if (zit_in_rij(input, rij, nummer)):
         return False
-    elif (zit_in_rij(input, rij, nummer) == False):
+    elif (not zit_in_rij(input, rij, nummer)):
         return True
-    if (zit_in_kolom(input, kolom, nummer) == True):
-        return (zit_in_kolom(input, kolom, nummer) == False)
-    elif (zit_in_kolom(input, kolom, nummer) == False):
+    if (zit_in_kolom(input, kolom, nummer)):
+        return (not zit_in_kolom(input, kolom, nummer))
+    elif (not zit_in_kolom(input, kolom, nummer)):
         return True
-    if (zit_in_box(input, rij, kolom, nummer) == True):
+    if (zit_in_box(input, rij, kolom, nummer)):
         return False
-    elif (zit_in_box(input, rij, kolom, nummer) == False):
+    elif (not zit_in_box(input, rij, kolom, nummer)):
         return True
 
 #sudoku oplossen
