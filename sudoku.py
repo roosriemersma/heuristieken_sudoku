@@ -25,6 +25,7 @@ def print_sudoku(input):
             print (x[i][j]),
         print ('\n')
 
+
 #zoeken naar lege plek in sudoku
 def zoek_lege_plek(input, plek):
     for rij in range(9):
@@ -52,3 +53,4 @@ def zit_in_kolom(input, kolom, nummer):
     return False
 
 #zoeken of nummer wordt gebruikt in box, als nummer in box zit dan return True
+
