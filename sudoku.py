@@ -19,12 +19,11 @@ for row in sudoku:
 #    print (firstNumb[0:1])
 
 #printen van de sudoku
-def print_sudoku(input):
+def sudoku_printen(input):
     for i in range(9):
         for j in range(9):
-            print (x[i][j]),
+            print (input[i][j]),
         print ('\n')
-
 
 #zoeken naar lege plek in sudoku
 def zoek_lege_plek(input, plek):
@@ -35,11 +34,11 @@ def zoek_lege_plek(input, plek):
                 plek[1] = kolom
                 return True
     return False
-#nu hebben we de "coordinaten" van een lege plek in de list plek, waarmee we nu verder gaan werken
+#nu hebben we de "coordinaten" van een lege plek in de list plek, die we later weer gaan gebruiken
 
 
 #zoeken of nummer gebruikt wordt in de rij, als nummer in rij zit dan return True
-def zit_in_rij(intput, rij, nummer):
+def zit_in_rij(input, rij, nummer):
     for i in range(9):
         if (input[rij][i] == nummer):
             return True
@@ -53,4 +52,47 @@ def zit_in_kolom(input, kolom, nummer):
     return False
 
 #zoeken of nummer wordt gebruikt in box, als nummer in box zit dan return True
+def zit_in_box(input, rij, kolom, nummer):
+    for i in range (3):
+        for j in range(3):
+            if (input[i + rij][j + kolom] == nummer):
+                return True
+    return False
 
+#kijken of nummer op de locatie kan, return een boolean om te kijken of nummer op locatie past
+def kan_nummer_hier(input, rij, kolom, nummer):
+    if zit_in_rij(input, rij, nummer):
+        return False
+    elif not zit_in_rij(input, rij, nummer):
+        return True
+    if zit_in_kolom(input, kolom, nummer):
+        return False
+    elif not zit_in_kolom(input, kolom, nummer):
+        return True
+    if zit_in_box(input, rij, kolom, nummer):
+        return False
+    elif not zit_in_box(input, rij, kolom, nummer):
+        return True
+
+#sudoku oplossen
+def sudoku_oplossen(input):
+    plek = [0, 0]
+    if (not zoek_lege_plek(input, plek)):
+        return True
+
+    rij = plek[0]
+    kolom = plek[1]
+
+    for nummer in range(1, 10):
+        if(kan_nummer_hier(input, rij, kolom, nummer)):
+            input[rij][kolom] = nummer
+            if (sudoku_oplossen(input)):
+                return True
+            input[rij][kolom] = 0
+    return False
+
+
+if (sudoku_oplossen(sudoku)):
+    sudoku_printen(sudoku)
+else:
+    print ("Geen oplossing mogelijk")
