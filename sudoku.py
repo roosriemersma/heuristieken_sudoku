@@ -15,7 +15,7 @@ def sudoku_printen(input):
     for i in range(9):
         for j in range(9):
             print (input[i][j], end=" ")
-        print ('\n')
+        print ('\n', end=" ")
 
 #zoeken naar lege plek in sudoku
 def zoek_lege_plek(input, plek):
