@@ -1,6 +1,6 @@
 #list filled with list of every line in sudoku
 sudoku = []
-puzzle = open("puzzle1.sudoku", "r")
+puzzle = open("puzzle5.sudoku", "r")
 for line in puzzle:
     line = line.replace(",", "")
     line = line.rstrip()
@@ -22,11 +22,12 @@ for row in sudoku:
 def sudoku_printen(input):
     for i in range(9):
         for j in range(9):
-            print (input[i][j]),
+            print (input[i][j], end=" ")
         print ('\n')
 
 #zoeken naar lege plek in sudoku
 def zoek_lege_plek(input, plek):
+
     for rij in range(9):
         for kolom in range(9):
             if(input[rij][kolom] == 0):
@@ -84,4 +85,4 @@ def sudoku_oplossen(input):
 if (sudoku_oplossen(sudoku)):
     sudoku_printen(sudoku)
 else:
-    print ("Geen oploossing mogelijk")
+    print ("Geen oplossing mogelijk")
