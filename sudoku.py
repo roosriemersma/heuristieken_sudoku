@@ -62,18 +62,6 @@ def zit_in_box(input, rij, kolom, nummer):
 #kijken of nummer op de locatie kan, return een boolean om te kijken of nummer op locatie past
 def kan_nummer_hier(input, rij, kolom, nummer):
     return not zit_in_rij(input, rij, nummer) and not zit_in_kolom(input, kolom, nummer) and not zit_in_box(input,rij - rij%3,kolom - kolom%3,nummer)
-   # if zit_in_rij(input, rij, nummer):
-   #     return False
-   #  elif not zit_in_rij(input, rij, nummer):
-   #    return True
-   # if zit_in_kolom(input, kolom, nummer):
-   #     return False
-   # elif not zit_in_kolom(input, kolom, nummer):
-   #     return True
-   # if zit_in_box(input, rij, kolom, nummer):
-   #     return False
-   # elif not zit_in_box(input, rij, kolom, nummer):
-   #     return True
 
 #sudoku oplossen
 def sudoku_oplossen(input):
