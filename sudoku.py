@@ -11,6 +11,7 @@ print (sudoku)
 
 #printen van de sudoku
 def sudoku_printen(input):
+    print("hello")
     for i in range(9):
         for j in range(9):
             print (input[i][j]),
