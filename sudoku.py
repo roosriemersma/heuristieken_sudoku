@@ -1,6 +1,6 @@
 #list filled with list of every line in sudoku
 sudoku = []
-puzzle = open("puzzle3.sudoku", "r")
+puzzle = open("puzzle5.sudoku", "r")
 for line in puzzle:
     line = line.replace(",", "")
     line = line.rstrip()
@@ -8,11 +8,6 @@ for line in puzzle:
     line = list(map(int, line))
     sudoku.append(line)
 print (sudoku)
-
-
-#kolom geprint, waat ook niet of we hier iets mee kunnen, loop maken lukt me niet
-#for firstNumb in sudoku:
-#    print (firstNumb[0:1])
 
 #printen van de sudoku
 def sudoku_printen(input):
@@ -23,12 +18,10 @@ def sudoku_printen(input):
             elif j == 5:
                 print(input[i][j], "|", end=" ")
             else:
-                print (input[i][j], end=" ")
-
+                print(input[i][j], end=" ")
         print ('\n', end="")
         if i == 2 or i == 5:
-            print("- - - + - - - + - - -")
-
+            print("- - - + - - -+ - - -")
 #zoeken naar lege plek in sudoku
 def zoek_lege_plek(input, plek):
 
