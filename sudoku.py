@@ -1,6 +1,6 @@
 #list filled with list of every line in sudoku
 sudoku = []
-puzzle = open("puzzle5.sudoku", "r")
+puzzle = open("puzzle1.sudoku", "r")
 for line in puzzle:
     line = line.replace(",", "")
     line = line.rstrip()
@@ -13,7 +13,7 @@ print (sudoku)
 def sudoku_printen(input):
     for i in range(9):
         for j in range(9):
-            print (input[i][j], end=" ")
+             print (input[i][j], end=" ")
         print ('\n', end="")
 
 #zoeken naar lege plek in sudoku
@@ -27,7 +27,6 @@ def zoek_lege_plek(input, plek):
                 return True
     return False
 #nu hebben we de "coordinaten" van een lege plek in de list plek, die we later weer gaan gebruiken
-
 
 #zoeken of nummer gebruikt wordt in de rij, als nummer in rij zit dan return True
 def zit_in_rij(input, rij, nummer):
