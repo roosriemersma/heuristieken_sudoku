@@ -13,7 +13,12 @@ print (sudoku)
 def sudoku_printen(input):
     for i in range(9):
         for j in range(9):
-             print (input[i][j], end=" ")
+            if j == 2:
+                print(input[i][j], "|", end=" ")
+            elif j == 5:
+                print(input[i][j], "|", end=" ")
+            else:
+                print (input[i][j], end=" ")
         print ('\n', end="")
 
 #zoeken naar lege plek in sudoku
