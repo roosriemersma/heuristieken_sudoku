@@ -18,7 +18,6 @@ def sudoku_printen(input):
                 print(input[i][j], "|", end=" ")
             else:
                 print (input[i][j], end=" ")
-
         print ('\n', end="")
 
 #zoeken naar lege plek in sudoku
