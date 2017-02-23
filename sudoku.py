@@ -22,6 +22,7 @@ def sudoku_printen(input):
         print ('\n', end="")
         if i == 2 or i == 5:
             print("- - - + - - -+ - - -")
+
 #zoeken naar lege plek in sudoku
 def zoek_lege_plek(input, plek):
 
