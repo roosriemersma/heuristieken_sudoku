@@ -1,24 +1,23 @@
 #list filled with list of every line in sudoku
 sudoku = []
-puzzle = open("puzzle5.sudoku", "r")
+puzzle = open("puzzle6.sudoku", "r")
 for line in puzzle:
     line = line.replace(",", "")
     line = line.rstrip()
     line = list(line)
     line = list(map(int, line))
     sudoku.append(line)
-print (sudoku)
 
 #printen van de sudoku
 def sudoku_printen(input):
     for i in range(9):
         for j in range(9):
             if j == 2:
-                print(input[i][j], "|", end=" ")
+                print (input[i][j], "|", end=" ")
             elif j == 5:
                 print(input[i][j], "|", end=" ")
             else:
-                print(input[i][j], end=" ")
+                print (input[i][j], end=" ")
         print ('\n', end="")
         if i == 2 or i == 5:
             print("- - - + - - -+ - - -")
