@@ -1,13 +1,12 @@
 #list filled with list of every line in sudoku
 sudoku = []
-puzzle = open("puzzle5.sudoku", "r")
+puzzle = open("puzzle6.sudoku", "r")
 for line in puzzle:
     line = line.replace(",", "")
     line = line.rstrip()
     line = list(line)
     line = list(map(int, line))
     sudoku.append(line)
-print (sudoku)
 
 #printen van de sudoku
 def sudoku_printen(input):
