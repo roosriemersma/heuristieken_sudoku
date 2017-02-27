@@ -11,6 +11,7 @@ for line in puzzle:
     line = list(line)
     line = list(map(int, line))
     sudoku.append(line)
+print (sudoku)
 
 #printen van de sudoku
 def sudoku_printen(input):
@@ -37,7 +38,6 @@ def zoek_lege_plek(input, plek):
                 return True
     return False
 #nu hebben we de "coordinaten" van een lege plek in de list plek, die we later weer gaan gebruiken
-
 
 #zoeken of nummer gebruikt wordt in de rij, als nummer in rij zit dan return True
 def zit_in_rij(input, rij, nummer):
