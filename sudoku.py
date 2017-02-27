@@ -2,6 +2,7 @@ RANGE = 9
 BOX_RANGE = 3
 FIRST_LINE = 2
 SECOND_LINE = 5
+
 #list filled with list of every line in sudoku
 sudoku = []
 puzzle = open("puzzle1.sudoku", "r")
