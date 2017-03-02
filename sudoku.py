@@ -14,7 +14,6 @@ for line in puzzle:
     line = list(line)
     line = list(map(int, line))
     sudoku.append(line)
-print (sudoku)
 
 #printen van de sudoku
 def sudoku_printen(input):
