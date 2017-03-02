@@ -2,6 +2,8 @@ RANGE = 9
 BOX_RANGE = 3
 FIRST_LINE = 2
 SECOND_LINE = 5
+INNER_RANGE = 1
+OUTER_RANGE = 10
 
 #list filled with list of every line in sudoku
 sudoku = []
@@ -75,7 +77,7 @@ def sudoku_oplossen(input):
     rij = plek[0]
     kolom = plek[1]
 
-    for nummer in range(1, 10):
+    for nummer in range(INNER_RANGE, OUTER_RANGE):
         if(kan_nummer_hier(input, rij, kolom, nummer)):
             input[rij][kolom] = nummer
             if (sudoku_oplossen(input)):
