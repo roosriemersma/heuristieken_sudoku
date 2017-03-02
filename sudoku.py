@@ -5,6 +5,7 @@ SECOND_LINE = 5
 FIRST = 1
 LAST = 10
 NULWAARDE = 0
+NULWAARDE_KOLOM = 1
 
 #list filled with list of every line in sudoku
 sudoku = []
@@ -75,7 +76,7 @@ def sudoku_oplossen(input):
         return True
 
     rij = plek[NULWAARDE]
-    kolom = plek[1]
+    kolom = plek[NULWAARDE_KOLOM]
 
     for nummer in range(FIRST, LAST):
         if(kan_nummer_hier(input, rij, kolom, nummer)):
